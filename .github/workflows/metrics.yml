@@ -1,0 +1,21 @@
+name: GitHub Metrics
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 每天 0 点运行
+  workflow_dispatch:     # 允许手动执行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ShaoHui-G
+          filename: github-metrics.svg
+          base: activity
+          config_timezone: Asia/Shanghai
+          plugin_calendar: yes
+          plugin_calendar_limit: 180
+          output_action: commit
