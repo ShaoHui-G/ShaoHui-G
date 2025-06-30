@@ -1,6 +1,13 @@
-## Hi there 👋
+### 🗓️ 最近半年 GitHub 活跃日历
+
+![Metrics](./github-metrics.svg)
+
+
+
 
 <!--
+--## Hi there 👋
+
 **ShaoHui-G/ShaoHui-G** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
