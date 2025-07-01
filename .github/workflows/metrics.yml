@@ -2,8 +2,8 @@ name: GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # 每天 0 点运行
-  workflow_dispatch:     # 允许手动执行
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,4 +18,6 @@ jobs:
           config_timezone: Asia/Shanghai
           plugin_calendar: yes
           plugin_calendar_limit: 180
-          output_action: commit
+          output_action: commit          # 已有
+          committer_token: ${{ secrets.METRICS_TOKEN }}  # ✅ 用你的 classic token 来 push
+          committer_branch: main                         # ✅ 明确推到 main
