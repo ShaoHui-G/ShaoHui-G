@@ -1,4 +1,4 @@
-### 🗓️ 最近半年 GitHub 活跃日历
+### 🗓️ Hi there 👋
 
 ![Metrics](./github-metrics.svg)
 
