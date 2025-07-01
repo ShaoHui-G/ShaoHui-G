@@ -2,7 +2,7 @@ name: GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'      # 每天 UTC 0 点
   workflow_dispatch:
 
 jobs:
@@ -16,8 +16,8 @@ jobs:
           filename: github-metrics.svg
           base: activity
           config_timezone: Asia/Shanghai
-          plugin_calendar: yes
-          plugin_calendar_limit: 180
-          output_action: commit          # 已有
-          committer_token: ${{ secrets.METRICS_TOKEN }}  # ✅ 用你的 classic token 来 push
-          committer_branch: main                         # ✅ 明确推到 main
+          plugin_isocalendar: yes              # ↙︎ 开启半年度等距日历
+          plugin_isocalendar_duration: half-year
+          output_action: commit
+          committer_token: ${{ secrets.METRICS_TOKEN }}
+          committer_branch: main
