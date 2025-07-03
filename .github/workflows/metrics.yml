@@ -2,7 +2,7 @@ name: GitHub Metrics
 
 on:
   schedule:
-    - cron: '0 0 * * *'      # 每天 UTC 0 点
+    - cron: '0 0 * * 0'   # 每周日 UTC 0 点
   workflow_dispatch:
 
 jobs:
